@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "77644a9a-47e5-4789-9d72-e20c3b8934f1",
+		"name": "JPA TEsting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manytomany project",
+			"item": [
+				{
+					"name": "save student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"maria\",\r\n    \"lastName\": \"apellido\",\r\n    \"sexo\": \"F\",\r\n    \"course\":[\r\n        \"00001\",\r\n        \"00003\"\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/manytomany/student/save/information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"manytomany",
+								"student",
+								"save",
+								"information"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save of bunches of courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  [\r\n      {\r\n          \"name\":\"Aritmetica \",\r\n          \"description\":\"estudio de las matemaricas\",\r\n          \"code\":\"00001\"\r\n      },\r\n      {\r\n          \"name\":\"filosofia\",\r\n          \"description\":\"estudio de las preguntas de la vida\",\r\n          \"code\":\"00002\"\r\n      },\r\n        {\r\n          \"name\":\"Biologia\",\r\n          \"description\":\"estudio de las preguntas de la naturaleza\",\r\n          \"code\":\"00004\"\r\n      },\r\n       {\r\n          \"name\":\"Quimica\",\r\n          \"description\":\"composicion de la vida en la tierra\",\r\n          \"code\":\"00003\"\r\n      }\r\n  ]\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/manytomany/save/bunchesofcourses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"manytomany",
+								"save",
+								"bunchesofcourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save Course details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"aritmetica\",\r\n    \"code\":\"00002\",\r\n    \"description\" : \"matematicas \"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/manytomany/save/courseinformationbyone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"manytomany",
+								"save",
+								"courseinformationbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get student by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8030/manytomany/search/student/maria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"manytomany",
+								"search",
+								"student",
+								"maria"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Eduardo\",\r\n    \"description\": \"descripcion\",\r\n    \"ISBN\" :\"1258546664\",\r\n    \"category\": \"categoria\",\r\n    \"type\": \"tipo\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8030/bookfolder/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"bookfolder",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
