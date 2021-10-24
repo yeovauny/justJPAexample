@@ -6,14 +6,127 @@
 	},
 	"item": [
 		{
-			"name": "New Folder",
+			"name": "onetomany project",
 			"item": [
 				{
 					"name": "New Request",
 					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "hola",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8030/onetomany/post",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[LOCAL] new book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"bookName\":\"en busqueda de la felicidad\",\r\n    \"bookISBN\":\"12345-67890-0987-76544-1\",\r\n    \"autor\":\"No lo se\",\r\n    \"genero\":\"titulado\",\r\n    \"comentarios\":[\r\n        {\r\n            \"autor\":\"el de la esquina\",\r\n            \"descripcion\":\"buen comentario\",\r\n            \"comentario\":\"es un buen libro para tomar con una taza de te\"\r\n        },\r\n        {\r\n            \"autor\":\"el de al frente\",\r\n            \"descripcion\":\"no tan bueno\",\r\n            \"comentario\":\"libro muy aburrido me gusta mas el regaeton\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8030/onetomany/v1/newbook",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"v1",
+								"newbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[LOCAL] searchingAll Books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"bookName\":\"en busqueda de la felicidad\",\r\n    \"bookISBN\":\"12345-67890-0987-76544-1\",\r\n    \"autor\":\"No lo se\",\r\n    \"genero\":\"titulado\",\r\n    \"comentarios\":[\r\n        {\r\n            \"autor\":\"el de la esquina\",\r\n            \"descripcion\":\"buen comentario\",\r\n            \"comentario\":\"es un buen libro para tomar con una taza de te\"\r\n        },\r\n        {\r\n            \"autor\":\"el de al frente\",\r\n            \"descripcion\":\"no tan bueno\",\r\n            \"comentario\":\"libro muy aburrido me gusta mas el regaeton\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8030/onetomany/v1/searching-books",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"v1",
+								"searching-books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[LOCAL] searchingAll by ISBN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"bookName\":\"en busqueda de la felicidad\",\r\n    \"bookISBN\":\"12345-67890-0987-76544-1\",\r\n    \"autor\":\"No lo se\",\r\n    \"genero\":\"titulado\",\r\n    \"comentarios\":[\r\n        {\r\n            \"autor\":\"el de la esquina\",\r\n            \"descripcion\":\"buen comentario\",\r\n            \"comentario\":\"es un buen libro para tomar con una taza de te\"\r\n        },\r\n        {\r\n            \"autor\":\"el de al frente\",\r\n            \"descripcion\":\"no tan bueno\",\r\n            \"comentario\":\"libro muy aburrido me gusta mas el regaeton\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8030/onetomany/v1/searching-by-isbn/12345-67890-0987-76544-1",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"v1",
+								"searching-by-isbn",
+								"12345-67890-0987-76544-1"
+							]
+						}
 					},
 					"response": []
 				}
